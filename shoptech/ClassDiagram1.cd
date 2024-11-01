@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="shopdodadung.RouteConfig" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Start\RouteConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.MvcApplication" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Mystring" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAIAAAAAAAAACAAABAAAAAAA=</HashCode>
+      <FileName>Library\Mystring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Thongbao" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECACAAAAA=</HashCode>
+      <FileName>Library\Thongbao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.ThongbaoModel" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAA=</HashCode>
+      <FileName>Library\ThongbaoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Areas.Admin.AdminAreaRegistration" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\AdminAreaRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Areas.Admin.Controllers.AuthController" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\AuthController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Areas.Admin.Controllers.BaseController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Areas.Admin.Controllers.CategoryController" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAFAAARQACAAAAAAAAAAAEIAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\CategoryController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Areas.Admin.Controllers.DashboardController" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\DashboardController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Controllers.ModuleController" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAASAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ModuleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Controllers.SiteController" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAACAAAQAAAAAAAAAAAACBQBQAgQAAEAAAAAEAA=</HashCode>
+      <FileName>Controllers\SiteController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XCookie" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\XCookie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XMail" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Library\XMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.BanHangDBContext" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEAACAAABAAAAAADBAAAAAAEAAAAAAACAAAAGAAAAQ=</HashCode>
+      <FileName>Models\BanHangDBContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mcategogy" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAEAAAAAAACAAAAAAwAAAAAAIAkBgAAAAQAAAA=</HashCode>
+      <FileName>Models\Mcategogy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mcontact" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAEAAAAAAAAQAAAAAAIAgBAAAIAAACAA=</HashCode>
+      <FileName>Models\Mcontact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mlink" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Models\Mlink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mmenu" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAEAAAAAAAgAAAAAAQAAAAAAIAkBwAAQAAAAAA=</HashCode>
+      <FileName>Models\Mmenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Morder" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAEAAAAAAAAACQAACAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Models\Morder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Morderdetail" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\Morderdetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mpost" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAUAAAAAEACAAAAAAiAAAAAAIAkBQAAAAQACAA=</HashCode>
+      <FileName>Models\Mpost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mproduct" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAUAQAAAACCAEAAAAyAAAAAAIAkBAAAAAQACAA=</HashCode>
+      <FileName>Models\Mproduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mslider" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAUAAAAAAAgAAAAAAQAAAAAAIAkBAAAQAAAAAA=</HashCode>
+      <FileName>Models\Mslider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Mtopic" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAEAAAAAAACAAAAAAwAAAAAAIAkBgAAAAQAAAA=</HashCode>
+      <FileName>Models\Mtopic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Models.Muser" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAUACAAAMCAAAAAAAAAAAAAAIAmBQAAIAAAAAA=</HashCode>
+      <FileName>Models\Muser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="shopdodadung.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

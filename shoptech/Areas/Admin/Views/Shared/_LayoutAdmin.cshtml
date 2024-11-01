@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/LayoutSide.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/scripts/popper.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand d-none" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/admin/Dashboard">Trang chủ <span class="sr-only">(Current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sản phẩm
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="~/admin/product">Quản lý sản phẩm</a>
+                            <a class="dropdown-item" href="~/admin/product/create">Thêm sản phẩm</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/admin/category">Quản lý loại sản phẩm</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Bài viết
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item" href="~/admin/posts/create">Thêm bài viết</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="~/admin/posts">Quản lý bài viết</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hệ thống
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="~/admin/menu">Quản lý menu</a>
+                            <a class="dropdown-item" href="~/admin/slider">Quản lý Slider</a>
+                            <a class="dropdown-item" href="~/admin/topic">Quản lý Topic</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/admin/contact">Liên hệ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/admin/user">Người dùng</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                @*<ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hướng dẫn mua hàng</a>
+                    </li>
+                </ul>*@
+            <div class="top_nav_right">
+                <button type="button" class="btn btn-outline-dark"><a href="~/admin/logout">ĐĂNG XUẤT</a></button>
+            </div>
+            </div>
+        </nav>
+    </section>
+    <section class="clearfix">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                        <section class="clearfix copyright">
+                            <div class="container text-light text-center">
+                                Design by: Phan Anh Quốc
+                            </div>
+                        </section>
+                    </nav>
+</body>
+</html>
+
+

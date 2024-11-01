@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/LayoutSide.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/scripts/popper.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="top_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-none d-md-block text-left"><i class="fas fa-phone-volume"></i> Hotline: 0342079588</div>
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="top_nav_right">
+
+                        <button type="button" class="btn btn-outline-dark"><a href="~/admin/login">ĐĂNG NHẬP</a></button>
+                        <button type="button" class="btn btn-outline-dark"><a href="~/admin/logout">ĐĂNG XUẤT</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="clearfix header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Images/slider/logo.jpg" />
+
+
+                </div>
+                <div class="col-md-6 text-right">
+                    <div class="top_nav_right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="clearfix mainmenu">
+        <div class="container">
+            @Html.Action("MainMenu", "Module")
+
+        </div>
+
+
+    </section>
+    <section class="clearfix">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </section>
+
+    <script async defer crossorigin="anonymous" src=""></script>
+    <section class="clearfix footer " style="padding:30px; background-color:#0e0d0f;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="ui">
+                        <li>
+                            <a href="">
+                                <img src="~/Images/slider/logo.jpg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-center" style="color:white;font-size: 18px">20 Tăng Nhơn Phú B quận 9 TP.HCM</a>
+                        </li>
+                        <br>
+                        <li>
+                            <a class="text-center" style="color:white;font-size: 18px">Phone: 0342079588</a>
+                        </li>
+                        <br>
+                        <li>  <a class="text-center" style="color:white;font-size: 18px">Email: phananhquoc1999@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:white" class="">HỖ TRỢ</h4>
+                    <a style="color:white;font-size: 18px" href="" class="text-center">Hướng dẫn mua hàng </a><br>
+                    <a style="color:white;font-size: 18px" href="" class="text-center">Chính sách đổi trả</a><br>
+                    <a style="color:white;font-size: 18px" href="" class="text-center">Chính sách vận chuyển</a>
+
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color:white" class="text-center">CHĂM SÓC KHÁCH HÀNG</h4>
+                    <a style="color:white;font-size: 18px" href="" class="text-center">Hỗ trợ trực tuyến</a><br>
+                    <a style="color:white;font-size: 18px" href="" class="text-center">Tư vấn khách hàng</a><br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clearfix copyright">
+        <div class="container text-center">
+            Design by: Phan Anh Quốc
+        </div>
+    </section>
+</body>
+
+</html>
+
+

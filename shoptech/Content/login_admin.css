@@ -1,0 +1,11 @@
+﻿body {
+    background:#ffffff;
+}
+.swapper
+{
+    max-width:600px;
+    min-height:300px;
+    margin:auto;
+    border:1px solid #ffd800;
+    border-radius:7px;
+}

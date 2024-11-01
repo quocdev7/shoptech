@@ -1,0 +1,16 @@
+﻿@model IEnumerable<shopdodadung.Models.Mcategogy>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+@Html.Action("SlideShow", "Module")
+<div class="container my-3">
+    @foreach (var cat in Model)
+    {
+        <div class="my-4"></div>
+        <h3 class="text-center py-lg-5"><strong>@cat.Name</strong></h3>
+        @Html.Action("ProductHome", "Site", new { catid = cat.Id })
+    }
+
+
+</div>

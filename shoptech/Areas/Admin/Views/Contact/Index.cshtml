@@ -1,0 +1,80 @@
+﻿@model IEnumerable<shopdodadung.Models.Mcontact>
+
+@{
+    ViewBag.Title = "Quản lý Contact";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-7">
+                <strong class="text-danger text-uppercase">
+                    Quản lý Contact
+                </strong>
+            </div>
+            <div class="col-md-5 text-right">
+                <a href="~/admin/contact/create" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm</a>
+                <a href="~/admin/contact/trash" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Thùng rác</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-2">
+        @Html.Partial("_MessageAlert")
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th>Họ tên người dùng</th>
+                <th>Só điện thoại</th>
+                <th>Email</th>
+                <th>ngày tạo</th>
+                <th>Chức năng</th>
+                <th>ID</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                <input type="checkbox" name="checkid[]" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created_at)
+            </td>
+            <td>
+                @if (item.Status == 1)
+                {
+                    <a href="@Url.Action("Status", "Contact", new { id = item.Id })" class="btn btn-sm btn-success">
+                        <i class="fas fa-toggle-on">Trạng thái</i>
+                    </a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Status", "Contact", new { id = item.Id })" class="btn btn-sm btn-danger">
+                        <i class="fas fa-toggle-off">Trạng thái</i>
+                    </a>
+                }
+                <a href="@Url.Action("Edit", "Contact", new { id = item.Id })" class="btn btn-sm btn-info">
+                    <i class="fas fa-edit">Sửa</i>
+                </a>
+                <a href="@Url.Action("Deltrash", "Contact", new { id = item.Id })" class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash">Xóa</i>
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</div>

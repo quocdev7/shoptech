@@ -1,0 +1,49 @@
+﻿@model IEnumerable<shopdodadung.Models.Mproduct>
+@{
+    ViewBag.Title = "Mẫu TIVI";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Action("ListCategory","Module")
+        </div>
+        <div class="col-md-9">
+            <h2 class="text-center">@ViewBag.Title</h2>
+            <div class="row">
+                @foreach (var product in Model)
+                {
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <a href="~/@product.Slug">
+                                    <img src="~/Images/slider/@product.Img" class="img-fluid" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="text-center">
+                                <a href="~/@product.Slug">
+                                    @product.Name
+                                </a>
+                            </h5>
+                            <h5 class="text-center">
+                                <span class="mx-2"><del>@Html.FormatValue(product.Price, "{0:#,###}")d</del></span>
+                                <span class="mx-2">@product.Price_sale d</span>
+                            </h5>
+
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+    </div>
+</div>

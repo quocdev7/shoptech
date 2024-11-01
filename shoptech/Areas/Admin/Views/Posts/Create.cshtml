@@ -1,0 +1,66 @@
+﻿@model shopdodadung.Models.Mpost
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Html.Partial("_MessageAlert")
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-7">
+                    <strong class="text-danger text-uppercase">
+                        Thêm bài viết
+                    </strong>
+                </div>
+                <div class="col-md-5 text-right">
+                    <button type="submit" class="btn btn-sm btn-success"><i class="fas fa-save"></i>Lưu[Thêm]</button>
+                    <a href="~/admin/posts" class="btn btn-sm btn-danger"><i class="fas fa-times"></i>Thoát</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-2">
+            @Html.Partial("_MessageAlert")
+            <div class="row">
+                <div class="col-md-9">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label>Tên bài viết</label>
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mô tả bài viết</label>
+                        @Html.TextAreaFor(model => model.Detail, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Detail, "", new { @class = "text-danger" })
+                    </div>
+                    
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Hình ảnh</label>
+                        <input type="file" class="form-control" name="Img" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kiểu bài viết</label>
+                        <select name="Type" class="form-control">
+                            <option value="page">Page</option>
+                            <option value="post">Post</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Trạng thái</label>
+                        @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Value = "1", Text = "Xuất bản" }, new SelectListItem { Value = "2", Text = "Chưa xuất bản" } }, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

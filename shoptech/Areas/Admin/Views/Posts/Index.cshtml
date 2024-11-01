@@ -1,0 +1,80 @@
+﻿    @model IEnumerable<shopdodadung.Models.Mpost>
+
+@{
+    ViewBag.Title = "Quản lý bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-7">
+                    <strong class="text-danger text-uppercase">
+                        Quản lý sản phẩm
+                    </strong>
+                </div>
+                <div class="col-md-5 text-right">
+                    <a href="~/admin/posts/create" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm</a>
+                    <a href="~/admin/posts/trash" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Thùng rác</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-2">
+            @Html.Partial("_MessageAlert")
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>#</th>
+                    <th style="width:150px;">Hình</th>
+                    <th>Tên bài viết</th>
+                    <th>Kiểu bài viết</th>
+                    <th>ngày tạo</th>
+                    <th>Chức năng</th>
+                    <th>ID</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                    <input type="checkbox" name="checkid[]" />
+                </td>
+                <td>
+                    <img src="~/Images/slider/@item.Img" class="img-fluid" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created_at)
+                </td>
+                <td>
+                    @if (item.Status == 1)
+                    {
+                        <a href="@Url.Action("Status", "Posts", new { id = item.Id })" class="btn btn-sm btn-success">
+                            <i class="fas fa-toggle-on">Trạng thái</i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Status", "Posts", new { id = item.Id })" class="btn btn-sm btn-danger">
+                            <i class="fas fa-toggle-off">Trạng thái</i>
+                        </a>
+                    }
+                    <a href="@Url.Action("Edit", "Posts", new { id = item.Id })" class="btn btn-sm btn-info">
+                        <i class="fas fa-edit">Sửa</i>
+                    </a>
+                    <a href="@Url.Action("Deltrash", "Posts", new { id = item.Id })" class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash">Xóa</i>
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+            </tr>
+                }
+
+            </table>
+        </div>
+    </div>

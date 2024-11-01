@@ -1,0 +1,200 @@
+﻿@model IEnumerable<shopdodadung.Models.Mmenu>
+
+@{
+    ViewBag.Title = "Quản lý Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-7">
+                <strong class="text-danger text-uppercase">quản lý Menu</strong>
+            </div>
+            <div class="col-md-5 text-right">
+                <a href="~/admin/menu/trash" class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash"></i>Thùng rác
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        @Html.Partial("_MessageAlert")
+        <div class="row">
+            <div class="col-md-4">
+                @using (Html.BeginForm("Index", "Menu", FormMethod.Post))
+                {
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingCustom">
+                                <span>Vị trí Menu</span>
+                                <select name="position" class="form-control" required>
+                                    <option value="[]">Chọn vị trí</option>
+                                    <option value="mainmenu">Mainmenu</option>
+                                    <option value="footer">Footer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        CHỦ ĐỀ
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    @foreach (var rtop in ViewBag.listTopic)
+                                    {
+                                        <div class="form-check m-2">
+                                            <input name="itemTop" class="form-check-input" type="checkbox" value="@rtop.Id" id="topicCheck_@rtop.Id" />
+                                            <label class="form-check-label" for="topicCheck_@rtop.Id">@rtop.Name</label>
+                                        </div>
+                                    }
+                                    <div class="form-check m-2">
+                                        <input type="submit" name="THEMTOPIC" class="btn btn-md btn-success" value="Lưu" style="width:100px" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+                                        LOẠI SẢN PHẨM
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    @foreach (var rcat in ViewBag.listCat)
+                                    {
+                                        <div class="form-check m-2">
+                                            <input name="itemCat" class="form-check-input" type="checkbox" value="@rcat.Id" id="topicCheck_@rcat.Id" />
+                                            <label class="form-check-label" for="topicCheck_@rcat.Id">@rcat.Name</label>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="form-check m-2">
+                                    <input type="submit" name="THEMCATEGORY" class="btn btn-md btn-success" value="Lưu" style="width:100px" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                        TRANG ĐƠN
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    @foreach (var rpa in ViewBag.listPage)
+                                    {
+                                        <div class="form-check m-2">
+                                            <input name="itemPage" class="form-check-input" type="checkbox" value="@rpa.Id" id="pageCheck_@rpa.Id" />
+                                            <label class="form-check-label" for="pageCheck">@rpa.Title</label>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="form-check m-2">
+                                    <input type="submit" name="THEMPAGE" class="btn btn-md btn-success" value="Lưu" style="width:100px" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+                                        TÙY CHỈNH
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="form-check my-2">
+                                        <input class="form-control mb-2" type="text" name="name" placeholder="Tên menu" style="width:100%" />
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-control" type="text" name="link" placeholder="Tên link" style="width:100%" />
+                                    </div>
+                                </div>
+                                <div class="form-check m-2">
+                                    <input type="submit" name="THEMCUSTOM" class="btn btn-md btn-success" value="Lưu" style="width:100px" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-8">
+                <table class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Tên Menu<br />Liên kết</th>
+                        <th>Ngày tạo</th>
+                        <th>Chức năng</th>
+                        <th>ID</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkid[]" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)<br />
+                                (@Html.DisplayFor(modelItem => item.Link))
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Created_at)
+                            </td>
+                            <td>
+                                @if (@item.Status == 1)
+                                {
+                                    <a href="@Url.Action("Status","Menu",new {id = item.Id})" class="btn btn-sm btn-success">
+                                        <i class="fas fa-toggle-on">Trạng thái</i>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("Status","Menu",new {id = item.Id})" class="btn btn-sm btn-danger">
+                                        <i class="fas fa-toggle-off">Trạng thái</i>
+                                    </a>
+                                }
+                                <a href="@Url.Action("Edit","Menu",new {id = item.Id})" class="btn btn-sm btn-info">
+                                    <i class="fas fa-edit">Sửa</i>
+                                </a>
+                                <a href="@Url.Action("Deltrash","Menu",new {id = item.Id})" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash">Xóa</i>
+                                </a>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    function toggleChevron(e) {
+        $(e.target)
+				.prev('.panel-heading')
+				.find("i.indicator")
+				.toggleClass('fa-caret-down fa-caret-right');
+    }
+    $('#accordion').on('hidden.bs.collapse', toggleChevron);
+    $('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>
+

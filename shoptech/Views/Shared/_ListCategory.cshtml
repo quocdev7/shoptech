@@ -1,0 +1,11 @@
+﻿@model IEnumerable<shopdodadung.Models.Mcategogy>
+    <h3>DANH MỤC LOẠI SẢN PHẨM</h3>
+    <ul>
+        @foreach (var cat in Model)
+        {
+            
+        <li><a href="~/@cat.Slug" class="list-group-item">@cat.Name</a></li>
+          
+                @Html.Action("SubListCategory", "Module", new { parentid = cat.Id })
+                }
+        </ul>

@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/login_admin.css" rel="stylesheet" />
+</head>
+<body>
+    <form name="form1" action="" method="post">
+        <div class="swapper" mt-5 p-3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/Images/slider/logo.jpg" class="img-fluid" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="text-center text-danger text-uppercase">Đăng nhập hệ thống</h2>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Tên đăng nhập</label>
+                        <input name="username" type="text" class="form-control" id="formGroupExampleInput" required placeholder="Tên đăng nhập hoặc Email">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Mật khẩu</label>
+                            <input name="password" type="password" class="form-control" id="formGroupExampleInput2" required placeholder="Mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success px-s">Đăng nhập</button>
+                        </div>
+                        <div class="form-group">
+                            @Html.Raw(ViewBag.Error)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

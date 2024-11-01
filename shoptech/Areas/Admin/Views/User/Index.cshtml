@@ -1,0 +1,86 @@
+﻿@model IEnumerable<shopdodadung.Models.Muser>
+
+@{
+    ViewBag.Title = "Quản lý User";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-7">
+                <strong class="text-danger text-uppercase">
+                    Quản lý User
+                </strong>
+            </div>
+            <div class="col-md-5 text-right">
+                <a href="~/admin/user/create" class="btn btn-sm btn-success"><i class="fas fa-plus"></i>Thêm</a>
+                <a href="~/admin/user/trash" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Thùng rác</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body p-2">
+        @Html.Partial("_MessageAlert")
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th style="width:70px">Hình</th>
+                <th>Họ và tên</th>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>ngày tạo</th>
+                <th>Chức năng</th>
+                <th>ID</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                <input type="checkbox" name="checkid[]" />
+            </td>
+            <td>
+                <img src="~/Images/slider/@item.Img" class="img-fluid" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created_at)
+            </td>
+            
+            <td>
+                @if (item.Status == 1)
+                {
+                    <a href="@Url.Action("Status", "User", new { id = item.Id })" class="btn btn-sm btn-success">
+                        <i class="fas fa-toggle-on">Trạng thái</i>
+                    </a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Status", "User", new { id = item.Id })" class="btn btn-sm btn-danger">
+                        <i class="fas fa-toggle-off">Trạng thái</i>
+                    </a>
+                }
+                <a href="@Url.Action("Edit", "User", new { id = item.Id })" class="btn btn-sm btn-info">
+                    <i class="fas fa-edit">Sửa</i>
+                </a>
+                <a href="@Url.Action("Deltrash", "User", new { id = item.Id })" class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash">Xóa</i>
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</div>

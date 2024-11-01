@@ -1,0 +1,12 @@
+﻿@model IEnumerable<shopdodadung.Models.Mmenu>
+    @{ var menuitem = ViewBag.menuitem;}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="~/@menuitem.Link" id="navbarDropdown">@menuitem.Name
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @foreach(var item in Model)
+            {
+                <a class="dropdown-item" href="~/@item.Link">@item.Name</a>
+            }
+        </div>
+    </li>
